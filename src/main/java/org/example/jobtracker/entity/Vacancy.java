@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "vacancies")
-@Data // Генерирует геттеры, сеттеры, toString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Vacancy {
@@ -24,9 +24,6 @@ public class Vacancy {
 
     private String company;
 
-    // Зарплату лучше хранить текстом (так проще парсить: "$1000-2000")
-    // или двумя числами (min/max), если хочешь фильтрацию.
-    // Для лабы проще String.
     private String salary;
 
     private String city;
